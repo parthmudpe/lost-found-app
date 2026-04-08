@@ -24,5 +24,14 @@ function FilterBar({ search, setSearch, category, setCategory, status, setStatus
     </div>
   );
 }
+import PropTypes from 'prop-types';
 
+FilterBar.propTypes = {
+  search: PropTypes.string.isRequired,
+  setSearch: PropTypes.func.isRequired,
+  category: PropTypes.string.isRequired,
+  setCategory: PropTypes.func.isRequired,
+  status: PropTypes.string.isRequired,
+  setStatus: PropTypes.func.isRequired,
+};
 export default FilterBar;
