@@ -27,5 +27,17 @@ function ItemCard({ item }) {
     </div>
   );
 }
+import PropTypes from 'prop-types';
 
+ItemCard.propTypes = {
+  item: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    category: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+    date: PropTypes.string.isRequired,
+    status: PropTypes.string.isRequired,
+    description: PropTypes.string,
+  }).isRequired,
+};
 export default ItemCard;
