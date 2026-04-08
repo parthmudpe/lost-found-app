@@ -69,5 +69,16 @@ function Home({ items }) {
     </div>
   );
 }
+import PropTypes from 'prop-types';
 
+Home.propTypes = {
+  items: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    category: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+    date: PropTypes.string.isRequired,
+    status: PropTypes.string.isRequired,
+  })).isRequired,
+};
 export default Home;
