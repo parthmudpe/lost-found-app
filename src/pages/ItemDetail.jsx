@@ -24,5 +24,18 @@ function ItemDetail({ items, resolveItem }) {
     </div>
   );
 }
+import PropTypes from 'prop-types';
 
+ItemDetail.propTypes = {
+  items: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    category: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+    date: PropTypes.string.isRequired,
+    status: PropTypes.string.isRequired,
+    description: PropTypes.string,
+  })).isRequired,
+  resolveItem: PropTypes.func.isRequired,
+};
 export default ItemDetail;
