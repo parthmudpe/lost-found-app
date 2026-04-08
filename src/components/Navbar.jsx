@@ -16,5 +16,10 @@ function Navbar({ darkMode, setDarkMode }) {
     </nav>
   );
 }
+import PropTypes from 'prop-types';
 
+Navbar.propTypes = {
+  darkMode: PropTypes.bool.isRequired,
+  setDarkMode: PropTypes.func.isRequired,
+};
 export default Navbar;
