@@ -40,5 +40,9 @@ function AddItem({ addItem }) {
     </div>
   );
 }
+import PropTypes from 'prop-types';
 
+AddItem.propTypes = {
+  addItem: PropTypes.func.isRequired,
+};
 export default AddItem;
